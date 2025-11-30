@@ -1,16 +1,35 @@
-/* Estilos básicos para el proyecto inicial */
+/* Estilos Globales */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
+/* Sección Izquierda - Intro */
+.intro-section {
+    /* Imagen de fondo de Rick and Morty */
+    background: url('https://wallpapers.com/images/hd/rick-and-morty-space-travel-vector-art-kx63g73995f5i0x9.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Capa oscura para que se lea el texto sobre la imagen */
+.content-overlay {
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo negro semitransparente */
+    backdrop-filter: blur(3px); /* Efecto borroso elegante */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0,255,0, 0.2); /* Resplandor verde estilo portal */
+}
+
+/* Estilos de la Tarjeta */
 .card {
+    border: none;
     border-radius: 15px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
 }
 
 .card-img-top {
